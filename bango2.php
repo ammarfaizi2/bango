@@ -7,7 +7,7 @@ use stdClass;
 print "Enter your email: ";
 $email = trim(fgets(STDIN, 1024));
 $email = explode("@", $email);
-for ($i=0; $i < 10; $i++) {
+for ($i=0; $i < 100; $i++) {
 	$fixedEmail = sprintf("%s+%d@%s", $email[0], $i, $email[1]);
 	Bango::log("Processing %s...", $fixedEmail);
 	$bango = new Bango($fixedEmail);
@@ -39,7 +39,6 @@ for ($i=0; $i < 10; $i++) {
 	next_d:
 	$res = $bango->answerQuestion();
 	Bango::log("Done");
-	exit(0);
 }
 
 
