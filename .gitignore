@@ -6,3 +6,5 @@
 *.lock
 /vendor/
 /.phpintel/
+/cookies
+/bango_accounts.txt
